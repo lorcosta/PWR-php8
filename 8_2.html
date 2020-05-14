@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>PHP 8_1</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Lorenzo Costa" >
+    <link rel=stylesheet href=fogliodistile.css>
+    <script type="text/javascript">
+    function check(n){
+      var accettabile=/^\d+$/
+      n=document.getElementById(n).value
+      if(!accettabile.test(n)){
+        window.alert("Attenzione, inserire solo numeri interi")
+      }
+    }
+    </script>
+  </head>
+  <body>
+      <h1>Pagina realizzata con PHP</h1>
+      <p>Autore della pagina: Lorenzo Costa</p>
+      <form id="form" action="8_2.php" method="get">
+        <input type="number" name="num1" id="num1" placeholder="Inserisci qui un numero" onchange="check('num1')">
+        <input type="number" name="num2" id="num2" placeholder="Inserisci qui un numero" onchange="check('num2')">
+        <input type="submit" name="submit" value="Somma">
+        <input type="reset" name="reset" value="Cancella">
+      </form>
+  </body>
+</html>
