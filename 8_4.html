@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>PHP 8_4</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Lorenzo Costa" >
+    <link rel=stylesheet href=fogliodistile.css>
+    <script type="text/javascript">
+    "use strict";
+      function isEverythingOk(prezzo,iva){
+        var regexp=/^(\d)+(\,|\.)?(\d{1,2})?$/
+        var prezzo=document.getElementById(prezzo).value
+        if(!regexp.test(prezzo)){
+          window.alert("Attenzione! Solo numeri interi o reali con al più due cifre dopo la virgola")
+          return
+        }
+        if(iva==null){
+          window.alert("Scegli quale regime fiscale adottare")
+          return
+        }
+      }
+      function controllo(prezzo){
+        var regexp=/^(\d)+(\,|\.)?(\d{1,2})?$/
+        var prezzo=document.getElementById(prezzo).value
+        if(!regexp.test(prezzo)){
+          window.alert("Attenzione! Solo numeri interi o reali con al più due cifre dopo la virgola")
+          return
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <h1>Pagina realizzata con PHP</h1>
+      <p>Autore della pagina: Lorenzo Costa</p>
+      <p>Inserisci un prezzo intero o reale con al più due cifre dopo la virgola</p>
+      <form id="form" action="8_4.php" method="get" onsubmit="isEverythingOk('prezzo',iva.value)">
+        <input type="number" name="prezzo" id="prezzo" onchange="controllo('prezzo')">
+        <input type="radio" name="iva" value="4">
+        <label for="Minima">Minima</label>
+        <input type="radio" name="iva" value="10">
+        <label for="Ridotta">Ridotta</label>
+        <input type="radio" name="iva" value="22">
+        <label for="Ordinaria">Ordinaria</label>
+        <input type="submit" name="submit" value="Calcola iva">
+      </form>
+  </body>
+</html>
