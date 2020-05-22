@@ -18,19 +18,19 @@
           //printf("%d ",$iva);
           switch ($iva){
             case (4):
-              printf("<p>Aggiungendo l'iva del 4% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.04));
+              printf("<p>Aggiungendo l'iva del 4%% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.04));
               $tot=$prezzo*1.04;
-              echo "<p>Aggiungendo l'iva del 4% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
+              #echo "<p>Aggiungendo l'iva del 4% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
               break;
             case (10):
-              printf("<p>Aggiungendo l'iva del 10% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.1));
+              printf("<p>Aggiungendo l'iva del 10%% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.1));
               $tot=$prezzo*1.1;
-              echo "<p>Aggiungendo l'iva del 10% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
+              #echo "<p>Aggiungendo l'iva del 10% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
               break;
             case (22):
-              printf("<p>Aggiungendo l'iva del 22% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.22));
+              printf("<p>Aggiungendo l'iva del 22%% al prezzo di $prezzo, si ottiene %.2f </p>",($prezzo*1.22));
               $tot=$prezzo*1.22;
-              echo "<p>Aggiungendo l'iva del 22% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
+              #echo "<p>Aggiungendo l'iva del 22% al prezzo di $prezzo, si ottiene un totale di $tot </p>";
               break;
             default:
               printf("<p>Errore: qualcosa &egrave andato storto</p>");
